@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="./imgs/logo.svg" alt="logo-navbar">
+      <img src="./imgs/menu-mobile.svg"  alt="icone menu" onclick="modal()"> 
+    </div>  
+    <nav id="menu" class="navbar-menu">   
+      <div class="nav-link">
+        <a>Features</a>
+        <a>Pricing</a>
+        <a>Resources</a>
+      </div>
+      <div class="nav-link">
+        <a>Login</a>
+        <a>Sing Up</a>
+      </div>
+    </nav>   
+  </header>
+
+  <section class="banner">
+    <div class="bn-img"></div>
+    <div class="bn-txt">
+      <h1>More than just shorter links</h1>
+      <p>Build your brand’s recognition and get detailed insights 
+          on how your links are performing.</p>
+      <button href="" class="btn" >Get Started</button>
+    </div>
+  </section>
+
+  <div class="bg-grey">
+    <section class="shorten">
+      <form>
+        <input type="url" name="url" id="url" placeholder="Shorten a link here...">
+        <button onclick="newUrl()">Shorten It!</button>
+      </form>
+    </section>
+  
+
+  <section class="features">
+    <h2>Advanced Statistics</h2>
+    <p>Track how your links are performing across the web with our 
+      advanced statistics dashboard.</p>
+    <div class="vl"></div>
+    <div class="card">
+      <img class="card-icon" src="./imgs/icon-brand-recognition.svg" width="36px" height="36px">
+      <h2>Brand Recognition</h2>
+      <p>Boost your brand recognition with each click. Generic links don’t
+        mean a thing. Branded links help instil confidence in your content.</p>
+    </div>
+    <div class="card">
+      <img class="card-icon" src="./imgs/icon-detailed-records.svg" >
+      <h2>Detailed Records</h2>
+      <p>Gain insights into who is clicking your links. Knowing when and where people engage 
+        with your content helps inform better decisions.
+      </p>
+    </div>
+    <div class="card">
+      <img class="card-icon" src="./imgs/icon-fully-customizable.svg" >
+      <h2> Fully Customizable</h2>
+      <p>Improve brand awareness and content discoverability through customizable links, 
+        supercharging audience engagement.
+      </p>
+    </section>
+</div>
+
+<section class="boost">
+  <h2>Boost your links today</h2>
+  <a class="btn">Get Started</a>
+</section>
+
+<footer>
+    <div class="links">
+      <img src="./imgs/logo-white.svg" alt="logo">
+      <div>
+        <h3>Features</h3>
+        <ul>
+          <li>Link Shortening</li>
+          <li>Branded Links</li>
+          <li>Analytics</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <ul>
+          <li>Blog</li>
+          <li>Developers</li>
+          <li>Support</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li>About</li>
+          <li>Our Team</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="social-icons" >
+        <img src="./imgs/icon-facebook.svg" alt="">
+        <img src="./imgs/icon-twitter.svg" alt="">
+        <img src="./imgs/icon-pinterest.svg" alt="">
+        <img src="./imgs/icon-instagram.svg" alt="">
+      </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+    Coded by <a href="#">Francisco Davi</a>.
+  </div>  
+</footer>
+
+  
+  <script>
+
+      let modalOpen = 0;
+
+      function newUrl(){
+        const elem = document.getElementById('result');
+        const item = document.createElement('div');
+        item.setAttribute('class', 'new-url')
+        item.innerHTML = `Nova url`;
+        elem.appendChild(item);
+      }
+
+      function modal(){
+        const menu = document.getElementById('menu');
+        if (!modalOpen){
+          menu.style.display = "block";
+          modalOpen = 1;
+        }
+        else{
+          menu.style.display = "none";
+          modalOpen = 0;
+        }  
+      }
+  </script>
+</body>
+</html>
